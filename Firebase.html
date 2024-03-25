@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<linkhref="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.10.7/dist/sweetalert2.min.css
+" rel="folha de estilo">
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<head>
+    <title>Tela de Login</title>
+    <style>
+        .container {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border:5px solid red;
+            border-radius: 5px;
+            box-shadow: 0px 5px  44px black;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+background: #c3e3dd;
+        }
+
+        .form-group .error-message {
+            color: red;
+            font-size: 14px;
+        }
+
+        .success {
+            color: green;
+            font-size: 18px;
+        }
+    </style>
+    <style>
+body {
+  font-family: Arial, sans-serif;
+  background: black;
+}
+
+.container {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 5px;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+input:hover{
+  
+
+  color: rgb(0, 255, 255);
+  background-color: #212121;
+  outline-color: #d80a0a;
+  box-shadow: -3px -3px 15px rgb(0, 255, 255);
+  transition: .1s;
+  transition-property: box-shadow;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  width: 100%;
+  padding: 16px 0;
+  font-size: 1rem;
+  background: #e50914;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  margin: 25px 0 10px;
+  cursor: pointer;
+  transition: 0.1s ease;
+  border-radius: 30px;
+}
+button:hover{
+  background-color: black;
+  color:red;
+}
+
+.error {
+  background: #ff0000;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 3px;
+}
+
+.success {
+  background: #00b300;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 3px;
+}
+form .remember-me {
+  display: flex;
+}
+
+form .remember-me input {
+  margin-right: 5px;
+  accent-color: #b3b3b3;
+}
+.form-wrapper a {
+  text-decoration: none;
+}
+
+.form-wrapper a:hover {
+  text-decoration: underline;
+
+}
+
+.form-wrapper :where(label, p, small, a) {
+  color: #b3b3b3;
+}
+form .form-control {
+  height: 50px;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.form-control input {
+  height: 100%;
+  width: 100%;
+  background: #333;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0 20px;
+}
+
+.form-control input:is(:focus, :valid) {
+  background: #444;
+  padding: 16px 20px 0;
+}
+
+.form-control label {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  pointer-events: none;
+  color: #8c8c8c;
+  transition: all 0.1s ease;
+}
+
+.form-control input:is(:focus, :valid) ~ label {
+  font-size: 0.75rem;
+  transform: translateY(-130%);
+}
+form .form-help {
+  display: flex;
+  justify-content: space-between;
+}
+a:hover{
+  background-color: black;
+  border-radius:4px 15px 30px;
+}
+#gr{
+  background-color:transparent;
+  color:red;
+}
+#continue-btn{
+  background-color:#07edf3;
+  color:black
+}
+#continue-btn:hover{
+  background-color:black;
+}
+#success{
+  background-color:#0af039d7;
+}
+h2{
+  color:black;
+  background-color:#82fd9e93;
+  border-radius:30px;
+}
+#welcome-email{
+  color:#db0f0f;
+}
+    </style>
+</head>
+
+<body>
+
+    <div id="login" class="container">
+      <center>
+        <h2>Tela de Login</h2></center>
+<button id="gr"   onclick="changeColor('rgba(5,102,124,0.715)')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brightness-high" viewBox="0 0 16 16">
+  <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
+</svg></button>
+        <div class="form-group">
+            <label for="email"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-arrow-down-fill" viewBox="0 0 16 16">
+  <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zm.192 8.159 6.57-4.027L8 9.586l1.239-.757.367.225A4.49 4.49 0 0 0 8 12.5c0 .526.09 1.03.256 1.5H2a2 2 0 0 1-1.808-1.144M16 4.697v4.974A4.5 4.5 0 0 0 12.5 8a4.5 4.5 0 0 0-1.965.45l-.338-.207z"/>
+  <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.354-1.646a.5.5 0 0 1-.722-.016l-1.149-1.25a.5.5 0 1 1 .737-.676l.28.305V11a.5.5 0 0 1 1 0v1.793l.396-.397a.5.5 0 0 1 .708.708z"/>
+</svg></label>
+            <input  type="email" id="email" placeholder="Digite seu email">
+        </div>
+        <div class="form-group">
+            <label for="password">  
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-lock2-fill" viewBox="0 0 16 16">
+  <path d="M7 7a1 1 0 0 1 2 0v1H7z"/>
+  <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M10 7v1.076c.54.166 1 .597 1 1.224v2.4c0 .816-.781 1.3-1.5 1.3h-3c-.719 0-1.5-.484-1.5-1.3V9.3c0-.627.46-1.058 1-1.224V7a2 2 0 1 1 4 0"/>
+</svg>
+            </label>
+            <input type="password" id="password" placeholder="Digite sua senha"    >
+        </div>
+
+        <button onclick="hr" id="login-btn">Login</button>
+    <div class="form-help">
+     <div class="remember-me">
+
+        <label for="remember-me">fale com o  suporte</label>
+      </div>
+      <a href="https://wa.me/message/RVIWLLDKSH43H1">suporte<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
+  <path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+</svg></a>
+    </div>
+  </form>
+  <p>não possui conta? <a href="https://8pdfg0.mimo.run/index.html">criar nova conta<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-fullscreen" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707m4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707m0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707m-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707"/>
+</svg></a></p>
+  <small>
+    This page is protected by Google reCAPTCHA to ensure you're not a bot.
+    <a href="#">©direitos reservados.</a>
+  </small>
+
+
+</div>
+    </div>
+
+
+    <div id="success" class="container" style="display: none;">
+      <center>
+        <h2>Login com sucesso <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-square-fill" viewBox="0 0 16 16">
+  <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm6.5 4.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5a.5.5 0 0 1 1 0"/>
+</svg></h2></center>
+        <div id="welcome-email"></div>
+        <button id="continue-btn">Continuar</button>
+       
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+    <script>
+// Initialize Firebase
+const firebaseConfig = {
+    apiKey: "AIzaSyBFd77t6WATX_xJiiNmacegw8SmzoRh6eE",
+    authDomain: "venom-986d7.firebaseapp.com",
+    projectId: "venom-986d7",
+    storageBucket: "venom-986d7.appspot.com",
+    messagingSenderId: "336315546604",
+    appId: "1:336315546604:web:afee27acaaadabdf71dec9"
+  };
+  // Inicialize o Firebase
+  firebase.initializeApp(firebaseConfig);
+
+const loginBtn = document.getElementById('login-btn');
+const emailInput = document.getElementById('email');
+const passwordInput = document.getElementById('password');
+const successDiv = document.getElementById('success');
+const welcomeEmailDiv = document.getElementById('welcome-email');
+const continueBtn = document.getElementById('continue-btn');
+
+loginBtn.addEventListener('click', () => {
+    const email = emailInput.value;
+    const password = passwordInput.value;
+
+    firebase.auth().signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+            const user = userCredential.user;
+            successDiv.style.display = 'block';
+            welcomeEmailDiv.textContent = 'Bem-vindo {{user}} ' + user.email + '!';
+            
+Swal.fire({
+  title: "⚠️",
+  text: "arraste a tela para baixo depois clica no button continuar.",
+  imageUrl: "https://i.ibb.co/mGzhXnr/Banner-Maker-23032024-124144.png",
+  imageWidth: 400,
+  imageHeight: 200,
+  imageAlt: "Custom image"
+});
+
+        })
+        .catch((error) => {
+            alert('Erro no login: ' + error.message);
+        });
+});
+
+continueBtn.addEventListener('click', () => {
+    // Ação a ser executada após clicar no 
+    alert("login bem com sucesso clica aqui")
+});
+    </script>
+<script>
+function changeColor(color) {
+document.body.style.backgroundColor = color;
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.7/dist/sweetalert2.all.min.js
+"></script>
+
+</body>
+
+</html>
